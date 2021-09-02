@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp/Models/ChatModel.dart';
-import 'package:whatsapp/Widgets/CustomListTile.dart';
-
 class CustomListTile extends StatelessWidget {
   ChatModel? chatData;
   CustomListTile({this.chatData});
@@ -13,11 +11,12 @@ class CustomListTile extends StatelessWidget {
         leading: CircleAvatar(
           backgroundColor: Colors.grey[300],radius: 30,
         ),
-        title: Text(chatData!.name!),
+        title: Text(chatData!.name!,style: TextStyle(fontSize: 19,fontWeight: FontWeight.w600),),
         subtitle: Row(
           children: [
             Icon(Icons.done_all,color: Colors.blueAccent,),
-            Text(chatData!.subTitle!),
+            SizedBox(width: 6,),
+            Text(chatData!.subTitle!,style: TextStyle(fontSize: 15),),
           ],
         ),
         trailing: Text(chatData!.time!),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp/View.Screens/homeScreen.dart';
+import 'package:whatsapp/Screens/HomeScreen.dart';
 void main()
 {
   runApp(WhatsApp());

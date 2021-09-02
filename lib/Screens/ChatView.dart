@@ -11,14 +11,15 @@ class ChatView extends StatefulWidget {
 
 class _ChatViewState extends State<ChatView> {
   List<ChatModel>chats=
-  [
-    ChatModel(name: 'Tolba',subTitle: 'It is ok',time: '4:31 AM',),
-    ChatModel(name: 'Eng Elghandour',subTitle: 'Fsociety',time: '9:15 AM',),
-    ChatModel(name: 'Nero',subTitle: 'Hello',time: '6:50 PM',),
-    ChatModel(name: 'abo Salah',subTitle: 'but why?',time: '8:30 PM',),
-    ChatModel(name: 'Ayman',subTitle: 'Hey Ayman',time: '1:12 AM',),
-    ChatModel(name: 'Sowidan',subTitle: 'No problem!',time: '5:07 PM',),
-  ];
+      [
+        ChatModel(name: 'Tolba',subTitle: 'Typing..',time: '10:20 PM'),
+        ChatModel(name: 'Hima',subTitle: 'Hey Hima',time: '9:16 PM'),
+        ChatModel(name: 'Ayman',subTitle: 'Why?',time: '6:22 PM'),
+        ChatModel(name: 'Abdallha',subTitle: 'bye..',time: '1:13 PM'),
+        ChatModel(name: 'Elghandour',subTitle: 'Typing..',time: '11:54 AM'),
+        ChatModel(name: 'Nero',subTitle: 'ok bro',time: '5:40 Am'),
+        ChatModel(name: 'Ahmed',subTitle: 'LOL',time: '4:31 AM',),
+      ];
   @override
   Widget build(BuildContext context) {
     return ListView.builder(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp/View.Screens/ChatView.dart';
+import 'package:whatsapp/Screens/CallsView.dart';
+import 'package:whatsapp/Screens/ChatView.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -46,10 +48,11 @@ class _HomeScreenState extends State<HomeScreen> {
             Icon(Icons.camera_alt),
             ChatView(),
             Icon(Icons.camera_alt),
-            Icon(Icons.camera_alt),
+            CallsView(),
           ],
         ),
       ),
     );
   }
 }
+
