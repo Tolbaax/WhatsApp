@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp/Screens/CallsView.dart';
-import 'package:whatsapp/Screens/ChatView.dart';
+import 'package:whatsapp/View/Screens/CallsView.dart';
+import 'package:whatsapp/View/Screens/ChatView.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
-
+static String id='HomeScreen';
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }

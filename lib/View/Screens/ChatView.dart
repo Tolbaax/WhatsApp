@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp/Models/ChatModel.dart';
-import 'package:whatsapp/Widgets/CustomListTile.dart';
+import 'package:whatsapp/View/Widgets/CustomListTile.dart';
 
 class ChatView extends StatefulWidget {
   const ChatView({Key? key}) : super(key: key);

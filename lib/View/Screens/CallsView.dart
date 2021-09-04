@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp/Models/CallsModel.dart';
-import 'package:whatsapp/Widgets/CallsListTile.dart';
+import 'package:whatsapp/View/Widgets/CallsListTile.dart';
 
 class CallsView extends StatefulWidget {
   const CallsView({Key? key}) : super(key: key);
