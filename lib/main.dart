@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp/View/Screens/HomeScreen.dart';
 import 'package:whatsapp/View/Screens/onBoarding.dart';
-import 'package:whatsapp/View/Screens/splashScreen.dart';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 void main()
 {
   runApp(WhatsApp());
@@ -13,7 +13,12 @@ class WhatsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       
-      home: SplashScreen(),
+      home: AnimatedSplashScreen(
+        splash: 'images/Whatsapp.png',
+        splashIconSize: 100,
+        nextScreen: OnBoarding(),
+        splashTransition: SplashTransition.fadeTransition,
+      ),
       routes:
       {
         OnBoarding.id:(context)=>OnBoarding(),

@@ -12,13 +12,13 @@ class ChatView extends StatefulWidget {
 class _ChatViewState extends State<ChatView> {
   List<ChatModel>chats=
       [
-        ChatModel(name: 'Tolba',subTitle: 'Typing..',time: '10:20 PM'),
-        ChatModel(name: 'Hima',subTitle: 'Hey Hima',time: '9:16 PM'),
-        ChatModel(name: 'Ayman',subTitle: 'Why?',time: '6:22 PM'),
-        ChatModel(name: 'Abdallha',subTitle: 'bye..',time: '1:13 PM'),
-        ChatModel(name: 'Elghandour',subTitle: 'Typing..',time: '11:54 AM'),
-        ChatModel(name: 'Nero',subTitle: 'ok bro',time: '5:40 Am'),
-        ChatModel(name: 'Ahmed',subTitle: 'LOL',time: '4:31 AM',),
+        ChatModel(name: 'Tolba',subTitle: 'Typing..',time: '10:20 PM',isGroup: false),
+        ChatModel(name: 'Hima',subTitle: 'Hey Hima',time: '9:16 PM',isGroup: false),
+        ChatModel(name: 'Ayman',subTitle: 'Why?',time: '6:22 PM',isGroup: false),
+        ChatModel(name: 'الهئ و المئ',subTitle: 'bye..',time: '1:13 PM',isGroup: true),
+        ChatModel(name: 'Elghandour',subTitle: 'Typing..',time: '11:54 AM',isGroup: false),
+        ChatModel(name: 'FCIS 3rd',subTitle: 'ok bro',time: '5:40 Am',isGroup: true),
+        ChatModel(name: 'Ahmed',subTitle: 'LOL',time: '4:31 AM',isGroup: false),
       ];
   @override
   Widget build(BuildContext context) {
