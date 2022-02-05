@@ -12,8 +12,8 @@ void main()
   SharedPreferences.getInstance().then((instance)
   {
     language = instance.getString('language')!;
-    runApp(WhatsApp());
   });
+  runApp(WhatsApp());
 }
 class WhatsApp extends StatelessWidget {
   const WhatsApp({Key? key}) : super(key: key);
@@ -21,6 +21,7 @@ class WhatsApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: AnimatedSplashScreen(
         splash: 'images/Whatsapp.png',
         splashIconSize: 100,

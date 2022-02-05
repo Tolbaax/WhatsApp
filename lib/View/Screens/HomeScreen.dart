@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp/View/Provider/language.dart';
 import 'package:whatsapp/View/Screens/CallsView.dart';
 import 'package:whatsapp/View/Screens/ChatView.dart';
 class HomeScreen extends StatefulWidget {
@@ -11,18 +10,8 @@ static String id='HomeScreen';
 
 class _HomeScreenState extends State<HomeScreen> {
 
-  Language _language =Language();
-  List<String> language1 =['AR','EN'];
-
+  int _currentIndex = 1;
   @override
-
-  void initState()
-  {
-    super.initState();
-    setState(() {
-      _language.getLanguage();
-    });
-  }
 
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -46,24 +35,41 @@ class _HomeScreenState extends State<HomeScreen> {
             })
           ],
           bottom: TabBar(
+            onTap: (index){
+              setState(() {
+                _currentIndex = index;
+              });
+            },
+            labelPadding: EdgeInsetsDirectional.all(6),
             labelColor: Colors.white,
             indicatorColor: Colors.white,
+            labelStyle: TextStyle(fontWeight: FontWeight.w500,fontSize: 15,),
             tabs: [
-              Icon(Icons.camera_alt),
-              Text('CHATS'),
-              Text('STATUS'),
-              Text('CALLS'),
+              Container(
+                  alignment: Alignment.topCenter,
+                  child: Icon(Icons.camera_alt,)),
+              Container(
+                  alignment: Alignment.topLeft,
+                  child: Text('CHATS',)),
+              Container(
+                  alignment: Alignment.topLeft,
+                  child: Text('STATUS')),
+              Container(
+                  alignment: Alignment.center,
+                  child: Text('CALLS',)),
             ],
           ),
         ),
         body: TabBarView(
           children: [
-            Icon(Icons.camera_alt),
+            Icon(Icons.camera_alt,),
             ChatView(),
             Icon(Icons.camera_alt),
             CallsView(),
           ],
         ),
+        floatingActionButton: _currentIndex==1?
+        FloatingActionButton(onPressed: null,child: Icon(Icons.chat,color: Colors.white,),backgroundColor: Colors.teal,):null
       ),
     );
   }
