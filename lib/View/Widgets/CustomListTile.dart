@@ -8,7 +8,7 @@ class CustomListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.only(bottom: 9),
       child: ListTile(
         leading: CircleAvatar(
           backgroundColor: Colors.grey[300],radius: 30,

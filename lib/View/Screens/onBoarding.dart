@@ -54,11 +54,11 @@ class _OnBoardingState extends State<OnBoarding> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 70),
+              padding: const EdgeInsets.only(top: 130),
               child: Column(
                 children: [
                   Text('from',style: TextStyle(color: Colors.grey[600],fontSize: 17),),
-                  Text('Mohamed Tolba',style: GoogleFonts.acme(color: Colors.green[600],fontSize: 20),),
+                  Text('Facebook',style: GoogleFonts.acme(color: Colors.green[600],fontSize: 20),),
                 ],
               ),
             )

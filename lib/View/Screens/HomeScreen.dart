@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/View/Provider/language.dart';
 import 'package:whatsapp/View/Screens/CallsView.dart';
 import 'package:whatsapp/View/Screens/ChatView.dart';
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 static String id='HomeScreen';
@@ -10,7 +10,20 @@ static String id='HomeScreen';
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+  Language _language =Language();
+  List<String> language1 =['AR','EN'];
+
   @override
+
+  void initState()
+  {
+    super.initState();
+    setState(() {
+      _language.getLanguage();
+    });
+  }
+
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 4,
@@ -55,4 +68,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
