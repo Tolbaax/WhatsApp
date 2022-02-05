@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp/View/Screens/CallsView.dart';
 import 'package:whatsapp/View/Screens/ChatView.dart';
+import 'package:whatsapp/View/Screens/StatusView.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 static String id='HomeScreen';
@@ -64,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Icon(Icons.camera_alt,),
             ChatView(),
-            Icon(Icons.camera_alt),
+            StatusView(),
             CallsView(),
           ],
         ),
