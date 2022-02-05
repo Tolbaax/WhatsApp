@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:whatsapp/View/Screens/CallsView.dart';
 import 'package:whatsapp/View/Screens/ChatView.dart';
 import 'package:whatsapp/View/Screens/StatusView.dart';
+import 'package:easy_localization/easy_localization.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 static String id='HomeScreen';
@@ -21,17 +22,29 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.teal,
-          title: Text('WhatsApp'),
+          title: Text('WhatsApp',style: TextStyle(fontSize: 24,fontWeight: FontWeight.w500),),
           actions: [
             IconButton(onPressed: (){}, icon: Icon(Icons.search),),
             PopupMenuButton(itemBuilder: (context)
             {
               return[
-                PopupMenuItem(child: Text('New group'),value: 'New group',),
-                PopupMenuItem(child: Text('New broadcast'),value: 'New broadcast',),
-                PopupMenuItem(child: Text('Linked devices'),value: 'Linked devices',),
-                PopupMenuItem(child: Text('Starred messages'),value: 'Starred messages',),
-                PopupMenuItem(child: Text('Settings'),value: 'Settings',),
+                PopupMenuItem(child: Text('ng').tr()),
+                PopupMenuItem(child: Text('nb').tr()),
+                PopupMenuItem(child: Text('ld').tr()),
+                PopupMenuItem(child: Text('sm').tr()),
+                PopupMenuItem(child: Text('s').tr()),
+                PopupMenuItem(child: InkWell(
+                    onTap: (){
+                      context.setLocale(Locale('ar'));
+                    },
+                    child: Text('العربية'))),
+
+                PopupMenuItem(child: InkWell(
+                    onTap: ()
+                    {
+                      context.setLocale(Locale('en'));
+                    },
+                    child: Text('English'))),
               ];
             })
           ],
@@ -44,20 +57,20 @@ class _HomeScreenState extends State<HomeScreen> {
             labelPadding: EdgeInsetsDirectional.all(6),
             labelColor: Colors.white,
             indicatorColor: Colors.white,
-            labelStyle: TextStyle(fontWeight: FontWeight.w500,fontSize: 15,),
+            labelStyle: TextStyle(fontWeight: FontWeight.w500,fontSize: 16,),
             tabs: [
               Container(
                   alignment: Alignment.topCenter,
                   child: Icon(Icons.camera_alt,)),
               Container(
                   alignment: Alignment.topLeft,
-                  child: Text('CHATS',)),
+                  child: Text('ch').tr()),
               Container(
                   alignment: Alignment.topLeft,
-                  child: Text('STATUS')),
+                  child: Text('st').tr()),
               Container(
                   alignment: Alignment.center,
-                  child: Text('CALLS',)),
+                  child: Text('ca',).tr()),
             ],
           ),
         ),
@@ -70,7 +83,8 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
         floatingActionButton: _currentIndex==1?
-        FloatingActionButton(onPressed: null,child: Icon(Icons.chat,color: Colors.white,),backgroundColor: Colors.teal,):null
+        FloatingActionButton(onPressed: null,
+          child: Icon(Icons.chat,color: Colors.white,),backgroundColor: Colors.teal,):null
       ),
     );
   }
